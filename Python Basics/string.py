@@ -19,3 +19,7 @@ print("Month: "+'February')
 print("word "*3)
 print(3*"word ")
 print(3*'4')
+
+hello="Hello World !"
+print(hello[2]+hello[5]*3+hello[7])
+# Space (" ") is also a symbol and has an index.
