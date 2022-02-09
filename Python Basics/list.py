@@ -64,3 +64,6 @@ print("list:",numbers)
 # finds the first occurrence of a list item and removes it.
 numbers.reverse()
 print("list:",numbers)
+
+list=[1,3,5,2,6,3,4]
+print(list[list[2]])
