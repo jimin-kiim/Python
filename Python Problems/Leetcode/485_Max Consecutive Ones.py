@@ -1,4 +1,6 @@
 #LeetCode Array-Introduction #1 (#485)
+# Max Consecutive Ones
+
 # nums=[1,1,0,1,1,1]
 nums=[1,0,1,1,0,1]
 count=[0]
