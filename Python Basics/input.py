@@ -9,6 +9,9 @@ print('Hello, '+name)
 age=int(input("Enter your age: "))
 print("Next year, "+ name+"'s age is : "+str(age+1))
 # int() function, str() function
+"""
+int(), str(), bool(), float()
+"""
 
 age+=3
 # in-place operator

@@ -9,7 +9,7 @@ for day in days:
         i+=1
 
 # iterate over a given sequence, such as lists or strings.
-
+    # string, list, tuple, range()
 string="How many 'i' is in this question ?"
 count=0
 for char in string:

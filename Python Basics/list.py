@@ -1,3 +1,8 @@
+"""
+List: mutable sequence
+    []
+"""
+
 words=["Hello","world","!",]
 print(words[0]+words[1])
 # print(words[3])   IndexError: list index out of range

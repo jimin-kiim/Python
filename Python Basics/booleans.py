@@ -3,6 +3,10 @@ boolean = True
 print(boolean)
 
 print(2==3)
+print("2 is 3?" ,2 is 3)
+    # '==' can be written as 'is' instead.
+print("2 is not 3?", 2 is not 3)
+    # '!=' can be written as 'is not' instead.
 print(2.7>3)
 print(2.0==2)
 print(2**4<=15)
