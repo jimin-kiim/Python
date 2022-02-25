@@ -1,5 +1,3 @@
-from json import load
-import re
 import requests
 from bs4 import BeautifulSoup
 
@@ -30,11 +28,12 @@ def extract_job(html):
     location=location.get_text(strip=True).strip("-")
     id=html["data-jobid"]
 
-    return {'title':title,'company':company,'location':location,'id':id,'link':f'https://stackoverflow.com/jobs/{id}'}
+    return {'title':title,'company':company,'location':location,'link':f'https://stackoverflow.com/jobs/{id}'}
 # company.string
 # company.get_text(strip=True)
 
 def get_jobs():
     last_page=extract_pages()
-    jobs=extract_jobs(last_page)        
+    jobs=extract_jobs(last_page)  
+
     return jobs

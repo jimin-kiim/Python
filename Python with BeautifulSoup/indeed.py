@@ -1,4 +1,3 @@
-import re
 import requests
 from bs4 import BeautifulSoup
 
@@ -11,6 +10,7 @@ def extract_pages():
     pagination= soup.find("div",{"class":"pagination"})
     links=pagination.find_all("a")
     max_page=int(links[-2].string)
+    
     return max_page
 
 def extract_jobs(last_page):
@@ -33,5 +33,6 @@ def extract_job(html):
 
 def get_jobs():
     last_page=extract_pages()
-    jobs=extract_jobs(last_page)        
+    jobs=extract_jobs(last_page) 
+    
     return jobs
