@@ -1,8 +1,5 @@
-import requests
-from bs4 import BeautifulSoup
-from indeed import extract_pages, extract_jobs
 
-last_page=extract_pages()
+from indeed import get_jobs as get_indeed_jobs
 
-jobs=extract_jobs(last_page)
-print(jobs)
+indeed_jobs=get_indeed_jobs()
+print(indeed_jobs)

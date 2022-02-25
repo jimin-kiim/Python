@@ -43,3 +43,8 @@ def extract_job(html):
     id=html["data-jk"]
     if title != "new":
         return {'title':title,'company':company,'location':location,'link':f"https://www.indeed.com/viewjob?jk={id}"}
+
+def get_jobs():
+    last_page=extract_pages()
+    jobs=extract_jobs(last_page)        
+    return jobs
