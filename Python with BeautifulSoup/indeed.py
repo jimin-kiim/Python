@@ -7,23 +7,10 @@ URL=f"https://www.indeed.com/jobs?as_and=python&limit={LIMIT}&vjk=43a7c98bbd0875
 
 def extract_pages():
     result = requests.get(URL)
-    # print(result)
-    # print(result.text)
-    # bringing all the html codes
-
     soup= BeautifulSoup(result.text,'html.parser')
-    # print(soup)
     pagination= soup.find("div",{"class":"pagination"})
     links=pagination.find_all("a")
-    # print(pages)
-    pages=[]
-    for link in links[:-1] : 
-    # get all the items except for the last one.
-        pages.append(int(link.string))
-        # link.find("span").string results the same. 
-    # print(pages)
-    max_page=pages[-1]
-
+    max_page=int(links[-2].string)
     return max_page
 
 def extract_jobs(last_page):
