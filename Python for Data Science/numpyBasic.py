@@ -28,8 +28,11 @@ print(x)
 y=np.sort(x)
 print(y)
 
+'''
+arange & reshape
+'''
 z=np.arange(2,10,3)
-print(z)
+print("z=np.arange(2,10,3)", z)
 #  create an array that contains a range of evenly spaced intervals (similar to a Python range)
 
 z=np.arange(1,7)
@@ -58,3 +61,55 @@ x = np.arange(1, 8, 3)
 z = x.reshape(3, 1)
 print(z[1][0])
 
+'''
+Indexing & Slicing
+'''
+x=np.arange(1,10)
+print(x)
+print("x[0:2]", x[0:2])
+print("x[5:]",x[5:])
+print("x[:2]",x[:2])
+print("x[-3:]",x[-3:])
+
+'''
+Condition
+'''
+
+x=np.arange(1,10)
+print("x[x<4]",x[x<4])
+print("x[(x>5) & (x%2==0)]",x[(x>5) & (x%2==0)])
+
+'''
+Array Operation
+'''
+x=np.arange(1,10)
+print("x.sum()",x.sum())
+print("x.min()",x.min())
+print("x.max()",x.max())
+
+y=2*x
+# broadcasting
+print(y)
+
+print("np.mean(x)", np.mean(x))
+print("np.median(x)", np.median(x))
+print("np.var(x)", np.var(x))
+print("np.std(x)", np.std(x))
+
+print("x[x>np.mean(x)]",x[x>np.mean(x)])
+
+"""
+# House Prices Problem
+
+' You are given an array that represents house prices.
+Calculate and output the percentage of houses that are within one standard deviation from the mean. ' 
+
+"""
+data = np.array([150000, 125000, 320000, 540000, 200000, 120000, 160000, 230000, 280000, 290000, 300000, 500000, 420000, 100000, 150000, 280000])
+
+mean=np.mean(data)
+std=np.std(data)
+# print(data[mean-std<data<mean+std]) : Value Error
+num=len(data[(mean-std<data)& (data<mean+std)])
+percentage= num/len(data)*100
+print(percentage)
