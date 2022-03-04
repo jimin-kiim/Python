@@ -27,6 +27,14 @@ info : df.info()
 deleting row : df.drop("",axis=0, inplace=True)
 deleting col : df.drop("",axis=1, inplace=True)
 
+creating col : df['']=~~~
+
+statistics : 
+        summarty : df.describe()
+        sum : df[''].sum()
+        mean : df[''].mean()
+        max : df[''].max()
+        min : df[''].min()
 '''
 data= {'ages':[14, 20, 34, 56], 'height': [145, 163, 180, 172]}
 
@@ -53,3 +61,14 @@ print("first two rows \n",df.head(2),"\n")
 print("last two rows\n", df.tail(2),"\n")
 
 print(df.info(),"\n")
+
+age_mean=df['ages'].mean()
+print(age_mean)
+
+'''
+Grouping 
+
+frequency of the values : df[""].value_counts()
+
+df.groupby('grouping_col')['value_col'].mean()
+'''
