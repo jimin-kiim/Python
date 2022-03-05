@@ -12,7 +12,8 @@ import pandas as pd
 DataFrame : automatically creates a numeric index for each row. 
             can be specified, when being created.
 
-accessing row : df.loc[""], df.loc[["","",""]]
+accessing row : df[{condition}]
+                df.loc[""], df.loc[["","",""]]
                 df.iloc[i]
                 df.head()
                 df.tail()

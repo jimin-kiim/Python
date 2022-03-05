@@ -1,6 +1,6 @@
 import pandas as pd
 
-data=pd.read_csv("sample_data/서울시 대기질 자료 제공_2020-2021.csv", encoding='utf-8')
+data=pd.read_csv("Python for Data Science/sample_data/서울시 대기질 자료 제공_2020-2021.csv", encoding='utf-8')
 df=pd.DataFrame(data)
 
 head=df.head()
