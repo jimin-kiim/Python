@@ -13,10 +13,20 @@ plt.savefig('Python for Data Science/result_img/plot2.png')
 
 (df.groupby('month')['미세먼지(PM10)'].mean()).plot(kind="bar")
 plt.savefig('Python for Data Science/result_img/monthly_pm10_mean.png')
+
 df=df.groupby('month')[['미세먼지(PM10)','초미세먼지(PM25)']].mean()
-df.plot(kind="bar",stacked=True)
+df.plot(kind="bar"
+,stacked=False
+# ,legend=False
+,color=["#beb783","#e85430"]
+)
+plt.xlabel('month')
+plt.ylabel('mean value')
+plt.suptitle("Mean Values of PM10 and PM25 in Seoul")
 plt.savefig('Python for Data Science/result_img/monthly_pm_mean.png')
+
 df.plot(kind="bar",stacked=False)
 plt.savefig('Python for Data Science/result_img/monthly_pm_mean2.png')
+
 df.plot(kind="barh",stacked=False)
 plt.savefig('Python for Data Science/result_img/monthly_pm_mean3.png')
