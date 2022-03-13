@@ -8,6 +8,24 @@ NumPy arrays are homogeneous, meaning they can contain only a single data type, 
 ndim :  returns the number of dimensions of the array.
 size : returns the total number of elements of the array.
 shape : returns a tuple of integers that indicate the number of elements stored along each dimension of the array.
+        how many rows and columns are in the data.
+
+np.arange()
+
+ndarray.ndim
+ndarray.size
+ndarray.shape
+ndarray.reshape()
+
+ndarray.sum
+ndarray.min
+ndarray.max
+
+np.mean(data)
+np.median(data)
+np.std(data)
+np.var(data)
+np.percentile(data,50)
 '''
 import numpy as np 
 
